@@ -11,13 +11,13 @@ By following these steps:
 You need to install the necessary packages for both the frontend (React) and backend (Node.js + Express).
 
 1.1 -  Navigate to the Backend Directory(./server):
-**cd ../path/to/todoms/server** 
+**cd ../TaskManagement/server** 
 Then, run:
 **npm install**
 This installs all the backend dependencies listed in package.json.
 
 1.2 -  Navigate to the Frontend Directory(./client):
-**cd ../path/to/todoms/client** 
+**cd ../TaskManagement/client** 
 Then, run:
 **npm install**
 This installs all the frontend dependencies.
@@ -30,7 +30,7 @@ Typically, there’s a .env.example file or similar. You can create a .env file 
 3. Run the Backend
 Navigate to the backend directory and run:
 
-**cd ../path/to/todoms/server**
+**cd ../TaskManagement/server**
 and run the server by taping :
 
 ** npm start **
