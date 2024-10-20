@@ -40,3 +40,20 @@ router.put('/todos/:id', async (req, res) => {
         res.status(500).json({ error: 'Failed to update todo' });
     }
 });
+
+router.delete('/todos/:id', async (req, res) => {
+    const db = getDb();
+    const id = req.params.id;
+
+    try {
+        const result = await db.collection('todos').deleteOne({ _id: new MongoClient.ObjectID(id) });
+        if (result.deletedCount === 0) {
+            return res.status(404).json({ error: 'Todo not found' });
+        }
+        res.status(204).send();
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to delete todo' });
+    }
+});
+
+module.exports = router;
