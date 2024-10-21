@@ -6,13 +6,13 @@ const navbarList = [
     value: "all",
   },
   {
-    name: "today",
+    name: "Today",
     value: `${month}/${dt.getDate()}`,
   },
 
   {
     name: "status",
-    value: "pending",
+    value: "Pending",
   },
   {
     name: "status",
@@ -20,7 +20,7 @@ const navbarList = [
   },
   {
     name: "status",
-    value: "complete",
+    value: "Complete",
   },
   {
     name: "priority",
