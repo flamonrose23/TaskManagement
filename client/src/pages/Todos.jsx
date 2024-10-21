@@ -38,7 +38,7 @@ const Todos = ({ userInfo }) => {
         <Header setshowNavbar={setshowNavbar} setshowForm={setshowForm} />
 
         <div
-          className="todo_body flex items-cnter justify-center 
+          className="todos_body flex items-cnter justify-center 
           overflow-x-hidden
          w-full  mr-auto ml-auto relative gap-[10px]"
         >
