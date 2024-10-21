@@ -33,7 +33,7 @@ Navigate to the backend directory and run:
 **cd ../TaskManagement/server**
 and run the server by taping :
 
-** npm start **
+** npm run devStart **
 
 
 This should start your backend server and connected to your database on the port that you have choose tu run the application
