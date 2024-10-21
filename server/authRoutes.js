@@ -24,4 +24,28 @@ router.post('/register', async (req, res) => {
         res.status(500).json({ error: 'Failed to register user' });
     }
 });
+
+router.post('/login', async (req, res) => {
+    const { email, password } = req.body;
+
+    const db = getDb();
+
+    try {
+        const user = await db.collection('users').findOne({ email });
+        if (!user) {
+            return res.status(401).json({ error: 'Invalid credentials' });
+        }
+
+        const match = await bcrypt.compare(password, user.password);
+        if (!match) {
+            return res.status(401).json({ error: 'Invalid credentials' });
+        }
+
+        const token = jwt.sign({ userId: user._id }, SECRET_KEY, { expiresIn: '1h' });
+        res.status(200).json({ token });
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to log in' });
+    }
+});
+
 module.exports = router;
