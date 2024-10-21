@@ -1,5 +1,5 @@
 const express = require('express');
-const { MongoClient } = require{'mongodb'}
+const { MongoClient } = require('mongodb');
 const { getDb } = require('./db');
 const router = express.Router();
 
