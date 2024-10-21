@@ -14,6 +14,7 @@ function NewTAsk({ type, showForm, setshowForm }) {
   const [priority, setpriority] = useState("");
   const [status, setstatus] = useState("");
   const user = JSON.parse(localStorage.getItem("user"));
+
   useEffect(() => {
     setContent(type === "create" ? "" : task.content);
     setdate(
@@ -106,4 +107,4 @@ setshowForm(false);
   );
 }
 
-export default NewTask;
+export default NewTAsk;
